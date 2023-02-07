@@ -63,3 +63,6 @@ Add the `@tailwind` directives for each of Tailwind’s layers to your main CSS 
     </body>
     </html>
 ```
+
+- Run server `python manage.py runserver` in the dir that contains `manage.py`
+- Run `npm run dev`
