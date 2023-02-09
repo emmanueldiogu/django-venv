@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     "theme",
     "core",
     "polls",
+    "website",
 ]
 
 MIDDLEWARE = [
