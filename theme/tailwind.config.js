@@ -7,6 +7,7 @@ module.exports = {
     './templates/**/*.html',
     // Templates in other apps
     '../polls/templates/**/*.html',
+    '../website/templates/**/*.html',
     // Ignore files in node_modules
     '!../../**/node_modules',
     // Include JavaScript files that might contain Tailwind CSS classes
