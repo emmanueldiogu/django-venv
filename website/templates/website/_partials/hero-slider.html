@@ -1,0 +1,124 @@
+{% load static %}
+<!-- ====== Hero Section Start -->
+
+<!-- Embla -->
+<div
+  x-data="{ embla: null, next: true, prev: true }"
+  x-init="() => {
+        embla = EmblaCarousel($refs.viewport, { loop: true })
+        embla.on('select', () => {
+            next = embla.canScrollNext()
+            prev = embla.canScrollPrev()
+        })
+        embla.on('init', () => {
+            next = embla.canScrollNext()
+            prev = embla.canScrollPrev()
+        })
+    }"
+  class="relative w-full mx-auto"
+>
+  <div x-ref="viewport" class="overflow-hidden w-full">
+    <div class="flex -ml-2.5">
+      <div class="relative min-w-full pl-2.5">
+        <div class="relative overflow-hidden h-[42vh] md:h-[47vh] xl:h-[72vh]">
+          <img
+            class="absolute block top-0 left-50 h-[42vh] md:h-[47vh] xl:h-[72vh] w-full min-w-full max-w-none -translate-x-2/4 object-cover object-[100%_30%]"
+            src="{% static 'img/home/agileprojecthome_1.jpeg' %}"
+          />
+          <div class="mx-auto lg:w-11/12">
+            <h5
+              class="absolute bottom-[20px] bg-secondary/75 text-white p-2 mx-auto lg:w-11/12 uppercase font-semibold text-[9px] md:text-xl wow fadeInUp"
+            >
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+              qui, temporibus cum voluptatum dignissimos asperiores maiores
+              praesentium sit assumenda nostrum mollitia reprehenderit molestias
+              consecte
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="relative min-w-full pl-2.5">
+        <div class="relative overflow-hidden h-[42vh] md:h-[47vh] xl:h-[72vh]">
+          <img
+            class="absolute block top-0 left-50 h-[42vh] md:h-[47vh] xl:h-[72vh] w-full min-w-full max-w-none -translate-x-2/4 object-cover object-[100%_30%]"
+            src="{% static 'img/home/agileprojecthome_2.jpeg' %}"
+          />
+          <div class="mx-auto lg:w-11/12">
+            <h5
+              class="absolute bottom-[20px] bg-secondary/75 text-white p-2 mx-auto lg:w-11/12 uppercase font-semibold text-[9px] md:text-xl wow fadeInUp"
+            >
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+              qui, temporibus cum voluptatum dignissimos asperiores maiores
+              praesentium sit assumenda nostrum mollitia reprehenderit molestias
+              consecte
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="relative min-w-full pl-2.5">
+        <div class="relative overflow-hidden h-[42vh] md:h-[47vh] xl:h-[72vh]">
+          <img
+            class="absolute block top-0 left-50 h-[42vh] md:h-[47vh] xl:h-[72vh] w-full min-w-full max-w-none -translate-x-2/4 object-cover object-[100%_30%]"
+            src="{% static 'img/home/agileprojecthome_3.jpeg' %}"
+          />
+          <div class="mx-auto lg:w-11/12">
+            <h5
+              class="absolute bottom-[20px] bg-secondary/75 text-white p-2 mx-auto lg:w-11/12 uppercase font-semibold text-[9px] md:text-xl wow fadeInUp"
+            >
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+              qui, temporibus cum voluptatum dignissimos asperiores maiores
+              praesentium sit assumenda nostrum mollitia reprehenderit molestias
+              consecte
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="relative min-w-full pl-2.5">
+        <div class="relative overflow-hidden h-[42vh] md:h-[47vh] xl:h-[72vh]">
+          <img
+            class="absolute block top-0 left-50 h-[42vh] md:h-[47vh] xl:h-[72vh] w-full min-w-full max-w-none -translate-x-2/4 object-cover object-[100%_30%]"
+            src="{% static 'img/home/agileprojecthome_4.jpeg' %}"
+          />
+          <div class="mx-auto lg:w-11/12">
+            <h5
+              class="absolute bottom-[20px] bg-secondary/75 text-white p-2 mx-auto lg:w-11/12 uppercase font-semibold text-[9px] md:text-xl wow fadeInUp"
+            >
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+              qui, temporibus cum voluptatum dignissimos asperiores maiores
+              praesentium sit assumenda nostrum mollitia reprehenderit molestias
+              consecte
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <button
+    :disabled="!prev"
+    @click="embla.scrollPrev()"
+    class="embla__button embla__button--prev fill-secondary"
+    type="button"
+  >
+    <svg class="embla__button__svg" viewBox="137.718 -1.001 366.563 643.999">
+      <path
+        d="M428.36 12.5c16.67-16.67 43.76-16.67 60.42 0 16.67 16.67 16.67 43.76 0 60.42L241.7 320c148.25 148.24 230.61 230.6 247.08 247.08 16.67 16.66 16.67 43.75 0 60.42-16.67 16.66-43.76 16.67-60.42 0-27.72-27.71-249.45-249.37-277.16-277.08a42.308 42.308 0 0 1-12.48-30.34c0-11.1 4.1-22.05 12.48-30.42C206.63 234.23 400.64 40.21 428.36 12.5z"
+      ></path>
+    </svg>
+  </button>
+  <button
+    :disabled="!next"
+    @click="embla.scrollNext()"
+    class="embla__button embla__button--next fill-secondary"
+    type="button"
+  >
+    <svg class="embla__button__svg" viewBox="0 0 238.003 238.003">
+      <path
+        d="M181.776 107.719L78.705 4.648c-6.198-6.198-16.273-6.198-22.47 0s-6.198 16.273 0 22.47l91.883 91.883-91.883 91.883c-6.198 6.198-6.198 16.273 0 22.47s16.273 6.198 22.47 0l103.071-103.039a15.741 15.741 0 0 0 4.64-11.283c0-4.13-1.526-8.199-4.64-11.313z"
+      ></path>
+    </svg>
+  </button>
+</div>
+
+<!-- ====== Hero Section End -->
